@@ -1,0 +1,36 @@
+
+body {
+  background-color: #f4f6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", "Noto Sans KR", sans-serif;
+}
+.card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.card p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+.card a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.label {
+  font-weight: bold;
+}
