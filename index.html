@@ -15,7 +15,14 @@
     <p><span class="label">Contact Form:</span> <a href="https://naver.me/5BcVabMr" class="btn" target="_blank">네이버 폼 작성하기</a></p>
     <p><span class="label">Bluesky:</span> <a href="https://bsky.app/profile/gogaon0.bsky.social" class="btn" target="_blank">프로필 보기</a></p>
     <p><span class="label">Instagram:</span> <a href="https://www.instagram.com/gogaon08?igsh=MWRoaXh2ZHh4d256cg==" class="btn" target="_blank">@gogaon08</a></p>
-    <p><span class="label">Minecraft:</span> <span class="btn" style="cursor:default;">join.wrd.kr:25219</span></p>
+    
+    <!-- Minecraft 서버 + 복사 버튼 -->
+    <p>
+      <span class="label">Minecraft:</span> 
+      <span id="mc-server" class="btn" style="cursor:default;">join.wrd.kr:25219</span>
+      <button class="btn" onclick="copyMCServer()" style="margin-left: 10px;">복사</button>
+    </p>
+
     <button id="darkModeToggle" class="toggle-btn">다크모드 토글</button>
   </div>
 
@@ -26,6 +33,16 @@
         document.body.classList.toggle("dark");
       };
     });
+
+    // 복사 기능
+    function copyMCServer() {
+      const serverText = document.getElementById('mc-server').textContent;
+      navigator.clipboard.writeText(serverText).then(() => {
+        alert('마크 서버 주소가 복사되었어요!');
+      }).catch(err => {
+        alert('복사 실패: ' + err);
+      });
+    }
   </script>
 </body>
 </html>
